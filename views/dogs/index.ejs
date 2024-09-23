@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/dogs/new">Add New Dog</a>
+    <h1>Dogs app</h1>
+    <h3>List all of your dogs</h3>
+    <% dogs.forEach(dog => { %>
+        <li><a href="/dogs/<%= dog._id %>"><%= dog.name %>, Breed: <%= dog.breed %></li></a>
+        <img src=<%= dog.image %> alt=<%= dog.name %>>
+      <% }); %>
+    </ul>
+</body>
+</html>

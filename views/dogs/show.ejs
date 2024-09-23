@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/dogs/<%= dog._id %>/edit">Edit <%= dog.name %></a>
+    <form action="/dogs/<%= dog._id %>?_method=DELETE" method="POST">
+        <button value="submit">DELETE DOG</button>
+    </form>
+    <h1><%= dog.name %>, Breed: <%= dog.breed %></h1>
+    <img src="<%= dog.image %>" alt="<%= dog.name %>">
+</body>
+</html>
